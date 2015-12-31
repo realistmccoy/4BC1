@@ -72,6 +72,22 @@ var app;
     function createVehicle(event) {
         event.preventDefault();
         console.log('create Vehicle');
+        var horsepower = $('#inputHP').val();
+        var numbSeat = $('#inputNumSeats').val();
+        var manufacturer = $('#inputManu').val();
+        var type = $('#inputType').val();
+        var secondary = $('#inputSecodary').val();
+        var vehicle;
+        if (type === 'Car')
+            vehicle = new app.classes.Car(horsepower, numbSeat, manufacturer, secondary);
+        if (type === 'Boat')
+            vehicle = new app.classes.Boat(horsepower, numbSeat, manufacturer, secondary);
+        if (type === 'Motorcycle')
+            vehicle = new app.classes.Motorcycle(horsepower, numbSeat, manufacturer, secondary);
+        app.Vehicle.push(vehicle);
+        displayVechiles();
     }
+    app.createVehicle = createVehicle;
     displayVechiles();
+    var me = new app.classes.Car(300, 2, 'Ford', 'Sports Type');
 })(app || (app = {}));

@@ -1,0 +1,22 @@
+{
+  "name": "4bc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/realistmccoy/4BC1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/realistmccoy/4BC1/issues"
+  },
+  "homepage": "https://github.com/realistmccoy/4BC1#readme",
+  "dependencies": {
+    "jquery": "^2.1.4"
+  }
+}
