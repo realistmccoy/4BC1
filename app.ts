@@ -61,7 +61,23 @@ function displayVechiles () {
 </div>
 </div>
   `);
-  document.getElementById('vehicle-results').innerHTML = elemString
+  document.getElementById('vehicle-results').innerHTML = elemString;
 }
+
+export function selectType(select: HTMLSelectElement) {
+let placeholder: string;
+if(select.value === "Car") placeholder ="Catagory...";
+if(select.value === "Boat") placeholder = 'Number of Engines...';
+if(select.value === "Motorcycle") placeholder = "does it look cool?(yes, no)";
+//to check the value of select
+//console.log(select.type);
+document.getElementById('secondaryPropInput').innerHTML = `<input type="text" class="form-control" id="inputSecodary" placeholder="${placeholder}"/>`
+}
+
+function createVehicle(event:Event) {
+    event.preventDefault();
+    console.log('create Vehicle');
+}
+//call functions
 displayVechiles();
-}
+} //end of app namespace

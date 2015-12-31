@@ -10,9 +10,37 @@
 
     </head>
     <body>
+
+        <div class="well container">
+        <form onsubmit="app.createVehicle(event)" class="form-inline">
+
+            <input class="form-control" type="text" placeholder="horsepower..." id="inputHP">
+
+                <input class="form-control" type="text" placeholder="numSeats..." id="inputNumSeats">
+
+                    <input class="form-control" type="text" placeholder="Maker..." id="inputManu">
+                    <select class="form-control" id="inputType" onchange="app.selectType(this)">
+                        <option value="Car">
+                            Car
+                        </option>
+                        <option value="Boat">
+                            Boat
+                        </option>
+                        <option value="Motorcycle">
+                            Motorcycle
+                        </option>
+                    </select>
+            <span id="secondaryPropInput"></span>
+            <input type="text" class="form-control" id="inputSecodary" placeholder="Catagory..."/>
+
+            <button type="button" class="btn btn-info">submit</button>
+        </form>
+        </div>
+        <hr>
         <div id="vehicle-results">
 
         </div>
+
 
         <script src="app.js" charset="utf-8"></script>
     </body>
